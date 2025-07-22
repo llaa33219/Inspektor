@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "엔트리-검사기",
+  "description": "엔트리에서 댓글/글 작성 시 맞춤법과 문법 검사를 해줍니다.",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://playentry.org/*",
+    "https://api.sapling.ai/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://playentry.org/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+} 
