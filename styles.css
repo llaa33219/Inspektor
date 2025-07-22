@@ -1,0 +1,289 @@
+/* 툴팁 스타일 (content.js에서 이동) */
+.spell-error-tooltip {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 4px 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  z-index: 999999;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+
+
+.spell-suggestion-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 2px 6px;
+  margin: 0 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.spell-suggestion-btn:hover {
+  background: #495057;
+}
+
+.spell-ignore-btn {
+  background: #adb5bd;
+  color: white;
+  border: none;
+  padding: 0px 4px;
+  margin-left: 4px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+.spell-ignore-btn:hover {
+  background: #868e96;
+}
+
+/* 기존 에러 패널 스타일 */
+.spell-check-errors {
+  position: fixed !important;
+  background: #ffffff;
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin-top: 8px;
+  max-width: 500px;
+  min-width: 300px;
+  z-index: 2147483647 !important; /* 최대 z-index 값 */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  top: 50px;
+  right: 20px;
+}
+
+.error-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e1e5e9;
+  border-radius: 8px 8px 0 0;
+}
+
+.error-count {
+  font-weight: 600;
+  color: #e74c3c;
+  font-size: 14px;
+}
+
+.close-errors {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.close-errors:hover {
+  background-color: #e9ecef;
+}
+
+.error-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.error-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f3f4;
+  transition: background-color 0.2s;
+}
+
+.error-item:last-child {
+  border-bottom: none;
+}
+
+.error-item:hover {
+  background-color: #f8f9fa;
+}
+
+.error-text {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 4px;
+  font-size: 13px;
+  background: #fff2f2;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.error-message {
+  color: #5a6c7d;
+  font-size: 12px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.error-suggestions {
+  font-size: 12px;
+  color: #495057;
+}
+
+.suggestion {
+  background: #e7f3ff;
+  color: #0056b3;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 2px 4px 2px 0;
+  transition: all 0.2s;
+  border: 1px solid #b3d7ff;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.suggestion:hover {
+  background: #d1ecf1;
+  border-color: #85c5d3;
+  transform: translateY(-1px);
+}
+
+.suggestion:active {
+  transform: translateY(0);
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+  /* 툴팁 다크 모드 */
+  .spell-error-tooltip {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f3f4f6;
+  }
+
+  .spell-suggestion-btn {
+    background: #4b5563;
+    color: #f3f4f6;
+  }
+
+  .spell-suggestion-btn:hover {
+    background: #374151;
+  }
+
+  .spell-ignore-btn {
+    background: #6b7280;
+    color: #f3f4f6;
+  }
+
+  .spell-ignore-btn:hover {
+    background: #4b5563;
+  }
+
+  /* 에러 패널 다크 모드 */
+  .spell-check-errors {
+    background: #2c3e50;
+    border-color: #495057;
+    color: #ffffff;
+  }
+
+  .error-header {
+    background: #34495e;
+    border-color: #495057;
+  }
+
+  .error-count {
+    color: #ff6b6b;
+  }
+
+  .close-errors {
+    color: #adb5bd;
+  }
+
+  .close-errors:hover {
+    background-color: #495057;
+  }
+
+  .error-item {
+    border-color: #495057;
+  }
+
+  .error-item:hover {
+    background-color: #34495e;
+  }
+
+  .error-text {
+    background: #3c2f2f;
+    color: #ffffff;
+  }
+
+  .error-message {
+    color: #adb5bd;
+  }
+
+  .suggestion {
+    background: #1a4480;
+    color: #87ceeb;
+    border-color: #2e5cb8;
+  }
+
+  .suggestion:hover {
+    background: #2e5cb8;
+    border-color: #4dabf7;
+  }
+}
+
+/* 애니메이션 */
+.spell-check-errors {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .spell-check-errors {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .error-header {
+    padding: 10px 12px;
+  }
+
+  .error-item {
+    padding: 10px 12px;
+  }
+
+  .error-text {
+    font-size: 12px;
+  }
+
+  .error-message {
+    font-size: 11px;
+  }
+
+  .error-suggestions {
+    font-size: 11px;
+  }
+} 
