@@ -2,10 +2,7 @@
   "manifest_version": 3,
   "name": "엔트리-검사기",
   "description": "엔트리에서 댓글/글 작성 시 맞춤법과 문법 검사를 해줍니다.",
-  "version": "1.0",
-  "permissions": [
-    "activeTab"
-  ],
+  "version": "1.1",
   "host_permissions": [
     "https://playentry.org/*",
     "https://api.sapling.ai/*"
