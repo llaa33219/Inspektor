@@ -18,7 +18,7 @@ class SpellChecker {
       'th': 'th',     // 태국어
     };
     this.spellApiUrl = 'https://api.sapling.ai/api/v1/edits';
-    this.apiKey = '96VO6VGPEN8M9IERZ9BTP25D81HRTX85';
+    this.apiKey = 'API_KEY';
     this.init();
   }
 
